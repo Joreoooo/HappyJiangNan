@@ -1,0 +1,69 @@
+<view class="box1">
+
+  <!-- 轮播图 -->
+  <swiper autoplay="true" interval="2000" circular="true" indicator-dots="true" class="swiper">
+      <swiper-item><image src="/images/image/university.jpeg" class="swiper-image"></image></swiper-item>
+  </swiper>
+
+  <!-- 自定义tab -->
+
+    <view class="tab">
+      <block wx:for="{{tabs}}" wx:key="index">
+        <view class="{{tabIndex==index?'active':'barItem'}}" bindtap="onTabClick" data-index="{{index}}">{{item}}</view>
+      </block>
+    </view>
+
+</view>
+
+<view class="box2">
+    <!-- 搜索框 -->
+  <view class="searchInput">
+    <image src="/images/home/search.png" class="searchIcon"></image>
+      <view class="searchText">搜索</view>
+  </view>
+  <!-- 内容区域 -->
+  <view class="content-wrapper">
+
+    <block wx:if="{{tabIndex==0}}">
+      <block wx:for="{{allList}}" wx:key="index">
+        <block wx:if="{{item.index==1}}">
+          <reward item="{{item}}" ></reward>
+        </block>
+        <block wx:if="{{item.index==2}}">
+          <lost item="{{item}}"></lost>
+        </block>
+        <block wx:if="{{item.index==3}}">
+          <second item="{{item}}"></second>
+        </block>
+      </block>
+
+
+    </block>
+      <!-- 悬赏令 -->
+    <block wx:if="{{tabIndex==1}}">
+      <block wx:for="{{rewardList}}" wx:key="index" >
+        <reward item="{{item}}"></reward>
+      </block>
+    </block>
+      <!-- 失物招领 -->
+    <block wx:if="{{tabIndex==2}}">
+      <block wx:for="{{lostList}}" wx:key="index" >
+        <lost item="{{item}}"></lost>
+      </block>
+    </block>
+      <!-- 二手交易 -->
+    <block wx:if="{{tabIndex==3}}">
+      <block wx:for="{{secondList}}" wx:key="index" >
+        <second item="{{item}}"></second>
+      </block>
+    </block>
+  </view>
+</view>
+  
+  <!-- 发布需求按钮 -->
+  <view class="publish"  bindtap="toPublish"><image src="/images/home/publish.png" class="publishIcon"></image></view>
+
+
+
+
+

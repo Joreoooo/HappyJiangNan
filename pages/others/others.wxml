@@ -1,0 +1,22 @@
+<view class="userInfo">
+    <image src="{{hisUserInfo[0].avatarUrl}}" class="avatar"></image>
+    <view class="nickname">{{hisUserInfo[0].nickName}}</view>
+  <view class="like" catchtap="like" data-openid="{{hisUserInfo[0]._openid}}"  wx:if="{{isLike==0&&hisUserInfo[0]._openid!=userInfo.openid}}" > 
+    <image src="/images/other/fan.png" class="likeImg"></image>
+    <view>关注TA</view>
+  </view> 
+  <view class="like_ed" catchtap="like" data-openid="{{hisUserInfo[0]._openid}}"  wx:if="{{isLike==1&&hisUserInfo[0]._openid!=userInfo.openid}}" >
+    <image src="/images/other/fan_ed.png" class="likeImg"></image>
+    <view>已关注</view>
+  </view>
+  </view>
+
+  <view class="datas">
+    <view class="data" bindtap="toFans">被关注（{{fansNum}}）</view>
+    <!-- <view class="data">被赞（{{allZan}}）</view> -->
+    <view class="data">访客（{{hisUserInfo[0].customer}}）</view>
+  </view>
+
+<block wx:for="{{hisActive}}" wx:key="index">
+          <active item="{{item}}"></active>
+</block>

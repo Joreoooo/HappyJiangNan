@@ -1,0 +1,11 @@
+<block wx:for="{{MyOrderList}}" wx:key="index">
+  <block wx:if="{{item.index==1}}">
+    <reward item="{{item}}" ></reward>
+  </block>
+  <block wx:if="{{item.index==2}}">
+    <lost item="{{item}}"></lost>
+  </block>
+  <block wx:if="{{item.index==3}}">
+    <second item="{{item}}"></second>
+  </block>
+</block>

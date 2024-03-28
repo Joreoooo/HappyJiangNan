@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/active/active",
+    "pages/message/message",
+    "pages/mine/mine",
+    "pages/myActive/myActive",
+    "pages/myOrder/myOrder",
+    "pages/pubOrder/pubOrder",
+    "pages/pubActive/pubActive",
+    "pages/chatting/chatting",
+    "pages/others/others",
+    "pages/fans/fans",
+    "pages/detail/detail",
+    "pages/getMoney/getMoney",
+    "pages/chongMoney/chongMoney",
+    "pages/question/question",
+    "pages/realName",
+    "pages/realName/realName"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "乐江南",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "/images/tab/主页图标.png",
+        "selectedIconPath": "/images/tab/主页图标选中.png"
+      },
+      {
+        "pagePath": "pages/active/active",
+        "text": "动态",
+        "iconPath": "/images/tab/动态图标.png",
+        "selectedIconPath": "/images/tab/动态图标选中.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/images/tab/消息图标.png",
+        "selectedIconPath": "/images/tab/消息图标选中.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/tab/我的图标.png",
+        "selectedIconPath": "/images/tab/我的图标选中.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

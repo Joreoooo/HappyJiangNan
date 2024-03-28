@@ -1,0 +1,40 @@
+/* 动态信息 */
+.one-active{background-color: white;border-radius: 20rpx;padding-bottom: 10rpx;margin: 10rpx 20rpx 10rpx 20rpx;}
+.activeInfo{display: flex;flex-direction: row;position: relative;}
+.left{display: flex;flex-direction: column;align-items: center;margin: 0 10rpx;}
+.right{display: flex;flex-direction: column;}
+.delete{position: absolute;right: 50rpx;top: 30rpx;color: #8c8a8a;font-size: 28rpx;}
+.avatar{height: 90rpx;width: 90rpx;margin: 20rpx;border-radius: 50%;border: solid 2rpx #d4d4d4;}
+.tag{font-size: 24rpx;border-radius: 15rpx;flex-shrink: 0;color: #3366cc;}
+.nickName{margin-top: 10rpx;margin-top: 30rpx;}
+.time{font-size: 22rpx;color: #8c8a8a;margin-top: 10rpx;margin-bottom: 20rpx;}
+
+.content{font-size: 28rpx;margin: 0 20rpx 10rpx 5rpx;}
+
+.images{padding-bottom: 70rpx;}
+.img1{height: 250rpx;margin-bottom: 10rpx;}
+.img2{width: 250rpx;height: 250rpx; margin-right:5rpx;}
+.img3{width: 180rpx;height: 180rpx;margin-right:5rpx;}
+.img4{width: 250rpx;height: 250rpx; margin-right:5rpx;}
+.img56789{width: 180rpx;height: 180rpx;margin-right:5rpx;}
+
+.interact{display: flex;flex-direction: row;position: absolute;right: 50rpx;bottom: 20rpx;}
+.zan{display: flex;flex-direction: row;}
+.comment{display: flex;flex-direction: row;margin-left: 50rpx;}
+.zanpic{height: 40rpx;margin-right: 10rpx;width: 40rpx;}
+.compic{height: 40rpx;margin-right: 10rpx;width: 40rpx;}
+
+.down{margin: 0 30rpx 10rpx 30rpx;background-color: #f3f3f3;border-radius: 20rpx; padding: 10rpx 30rpx 5rpx 30rpx;}
+.zanList{display: flex;flex-direction: row;align-items: flex-start;margin-bottom: 10rpx;}
+.one-comment{display: flex;flex-direction: row;font-size: 24rpx;margin-bottom: 10rpx;align-items: center;}
+.nick{color: #3366cc;font-size: 26rpx;}
+.nickZan{font-size: 26rpx;margin-right: 10rpx;}
+.com-content{margin-left: 10rpx;}
+
+
+/* 发送框 */
+.pubWrap{background-color: white;display: flex;flex-direction: row;align-items: center;position: fixed;bottom: 0;padding: 20rpx 40rpx;width: 100%;height: 100rpx;margin-bottom: 10rpx;}
+.pubLeft{background-color: #f3f3f3;border-radius: 20rpx;color: fff;margin-right: 30rpx;height: 80rpx;}
+.pubInput{padding: 10rpx 20rpx;width: 500rpx;}
+.pubButton{background-color: #1c5396;border-radius: 10rpx;color: white;padding: 15rpx 20rpx;}
+

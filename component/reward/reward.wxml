@@ -1,0 +1,38 @@
+<!-- 订单信息 -->
+
+<view class="order">
+  <view class="up">
+    <view class="left">
+      <image class="avatar" src="{{item.avatarUrl}}" catchtap="toOther"></image>
+      <view class="tag">#悬赏令#</view>
+    </view>
+    <view class="right">
+      <view class="name-time-cost">
+        <view class="name-time">
+          <view class="nickName">{{item.nickName}}</view>
+          <view class="time">{{item.time}}</view>
+        </view>
+        <view class="cost" wx:if="{{item.cost!=''&&item.cost!=undefined}}">￥{{item.cost}}</view>
+      </view>
+      <view class="content">{{item.content}}</view>
+    </view>
+  </view>
+  <!-- 地址 -->
+  <view class="down">
+    <view class="place" wx:if="{{item.placeFrom!=''&&item.placeFrom!=undefined}}">
+      <view class="square1">取</view> 
+      <view class="placeFrom">{{item.placeFrom}}</view>
+    </view>
+    <view class="place" wx:if="{{item.placeTo!=''&&item.placeTo!=undefined}}">
+      <view class="square2">送</view>
+      <view class="placeTo">{{item.placeTo}}</view>
+    </view>
+  </view>
+  <!-- 帮助他 -->
+  <view class="helpWrap" bindtap="toChat" wx:if="{{userInfo_openid==undefined}}">
+    <image src="/images/home/help.png" class="helpPic" mode="heightFix"></image>
+  </view>
+  <view class="helpWrap" bindtap="toChat" wx:elif="{{userInfo_openid!=item._openid}}">
+    <image src="/images/home/help.png" class="helpPic" mode="heightFix"></image>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+<view class="contain">
+
+<view class="up">
+  <!-- 发表按钮 -->
+  <view class="pubWrap">
+    <!-- <view class="pubText1">存草稿</view> -->
+    <view class="pubText2" bindtap="submit">发表</view>
+  </view>
+  <view class="hr"></view>
+
+  <!-- 文本内容 -->
+  <view class="inputWrap">
+    <textarea class="inputText" placeholder="分享身边的新鲜事~" rows="2000"placeholder-class="placeholderStyle" bindinput="getInput"></textarea>
+  </view>
+</view>
+
+
+<view class="down">
+
+  <view class="hr"></view>
+
+  <!-- 选择话题 -->
+  <view class="topicWrap" bindtap="chooseTopic">
+    <view>发布话题</view>
+    <view class="{{topic=='请选择话题'?'chooseTopic':'choosed'}}"  >{{topic}} ></view>
+  </view>
+
+
+
+
+
+  <!-- 图片内容 -->
+  <view class="imgWrap" wx:if="{{index!=0}}">
+      <view wx:for="{{images}}" wx:key="index"  class="oneImg">
+        <image src="{{item}}" class="addPic"></image>
+        <image src="/images/home/delete.png" class="deleteImg" bindtap="deleteImage" data-index="{{index}}"></image>
+      </view>
+
+
+      <image src="/images/home/add.png" class="addPic" bindtap="chooseImg"></image>
+
+  </view>
+
+</view>
+
+
+</view>
+
+<view wx:if="{{topicStatus==1}}" class="chooseWrap">
+    <view class="title">
+      <view></view>
+      <view>选择话题</view>
+      <view class="close" catchtap="chooseTopic">×</view>
+    </view>
+    <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" class="scroll">
+      <block  wx:for="{{tabs}}" wx:key="index" >
+        <view class="topics">
+          <view class="tabs"> 
+            <view class="topic">#{{item.topic}}#</view>
+            <view class="desc">{{item.desc}}</view>
+          </view>
+          <view class="choose" bindtap="onTabClick"  data-index="{{index}}" data-tag="{{item.topic}}">选择</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>

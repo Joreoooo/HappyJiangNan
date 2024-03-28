@@ -1,0 +1,6 @@
+<view wx:for="{{fansList}}" wx:key="index" class="fansWrap">
+  <view class="one-fans" bindtap="toOther" data-_openid="{{item.openid}}">
+    <image src="{{item.avatarUrl}}" class="avatar"></image>
+    <view>{{item.nickName}}</view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+<!-- 订单信息 -->
+
+<view class="order">
+  <view class="up">
+    <view class="left">
+      <image class="avatar" catchtap="toOther" src="{{item.avatarUrl}}"></image>
+      <view class="tag">#失物招领#</view>
+    </view>
+    <view class="right">
+      <view class="name-time-cost">
+        <view class="name-time">
+          <view class="nickName">{{item.nickName}}</view>
+          <view class="time">{{item.time}}</view>
+        </view>
+      </view>
+      <view class="content">{{item.content}}</view>
+      <!-- 图片 -->
+      <view class="images">
+      <!-- 一张图片 -->
+      <view wx:if="{{item.contentImg.length==1}}">
+        <image src="{{item.contentImg[0]}}" class="img1" mode="heightFix"></image>
+      </view>
+      <view wx:if="{{item.contentImg.length==2}}" >
+        <block wx:for="{{item.contentImg}}" wx:key="index">
+          <image class="img2" src="{{item}}" ></image>
+        </block>
+      </view>
+      <view wx:if="{{item.contentImg.length==3}}" >
+        <block wx:for="{{item.contentImg}}" wx:key="index">
+          <image class="img3" src="{{item}}" ></image>
+        </block>
+      </view>
+      <view wx:if="{{item.contentImg.length==4}}" >
+        <block wx:for="{{item.contentImg}}" wx:key="index">
+          <image class="img4" src="{{item}}" ></image>
+        </block>
+      </view>
+      <view wx:if="{{item.contentImg.length>4}}" >
+        <block wx:for="{{item.contentImg}}" wx:key="index">
+          <image class="img56789" src="{{item}}" ></image>
+        </block>
+      </view>
+    </view>
+    </view>
+  </view>
+  <!-- 帮助他 -->
+  <view class="helpWrap" bindtap="toChat" wx:if="{{userInfo_openid==undefined}}">
+    <image src="/images/home/help.png" class="helpPic" mode="heightFix"></image>
+  </view>
+  <view class="helpWrap" bindtap="toChat" wx:elif="{{userInfo_openid!=item._openid}}">
+    <image src="/images/home/help.png" class="helpPic" mode="heightFix"></image>
+  </view>
+</view>

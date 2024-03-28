@@ -1,0 +1,64 @@
+<view class="one-active" bindtap="toDetail">
+  <view class="activeInfo">
+    <view class="left">
+      <image src="{{item.avatarUrl}}" catchtap="toOther" class="avatar"></image>
+      <view class="tag" wx:if="{{item.tag!='请选择话题'}}">#{{item.tag}}#</view>
+    </view> 
+    <view class="right">
+      <view class="nickName">{{item.nickName}}</view>
+      <view class="time">{{item.time}}</view>
+      <view class="content">{{item.content}}</view>
+      <view class="images">
+        <!-- 一张图片 -->
+        <view wx:if="{{item.contentImg.length==1}}">
+          <image src="{{item.contentImg[0]}}" class="img1" mode="heightFix"></image>
+        </view>
+        <view wx:if="{{item.contentImg.length==2}}" >
+          <block wx:for="{{item.contentImg}}" wx:key="index">
+            <image class="img2" src="{{item}}" ></image>
+          </block>
+        </view>
+        <view wx:if="{{item.contentImg.length==3}}" >
+          <block wx:for="{{item.contentImg}}" wx:key="index">
+            <image class="img3" src="{{item}}" ></image>
+          </block>
+        </view>
+        <view wx:if="{{item.contentImg.length==4}}" >
+          <block wx:for="{{item.contentImg}}" wx:key="index">
+            <image class="img4" src="{{item}}" ></image>
+          </block>
+        </view>
+        <view wx:if="{{item.contentImg.length>4}}" >
+          <block wx:for="{{item.contentImg}}" wx:key="index">
+            <image class="img56789" src="{{item}}" ></image>
+          </block>
+        </view>
+      </view>
+      <view class="interact">
+        <view class="zan" catchtap="zan">
+          <image wx:if="{{isZan==0}}" src="/images/active/like.png" class="zanpic"  data-id="{{item._id}}"></image>
+          <image wx:if="{{isZan==1}}" src="/images/active/like_ed.png" class="zanpic"  data-id="{{item._id}}"></image>
+          <view>{{zanNum}}</view>
+        </view>   
+        <view class="comment">
+          <image src="/images/active/comment.png" class="compic"></image>
+          <view wx:if="{{item.commentList}}">{{item.commentList.length}}</view>
+          <view wx:else>0</view>
+        </view>
+      </view>
+    </view>
+    <view class="delete" wx:if="{{item._openid==userInfo.openid}}" catchtap="delete">删除</view>
+  </view>
+  <view class="down" wx:if="{{item.commentList.length>0||zanList.length>0}}" >
+    <view class="zanList" wx:if="{{zanList.length>0}}">
+      <image src="/images/active/like_ed.png" class="zanpic" ></image>
+      <block wx:for="{{zanList}}">
+        <view class="nickZan">{{item.nickName}}</view> 
+      </block>  
+    </view> 
+    <view class="one-comment" wx:for="{{item.commentList}}"> 
+      <view class="nick">{{item.nickName}}:</view>
+      <view class="com-content">{{item.comment}}</view> 
+    </view>
+  </view> 
+</view>

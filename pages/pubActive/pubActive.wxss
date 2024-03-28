@@ -1,0 +1,32 @@
+.contain{margin: 0 30rpx;display: flex;flex-direction: column;justify-content: space-between;height: 1000rpx;}
+
+/* 发表按钮 */
+.pubWrap{display: flex;flex-direction: row;justify-content: flex-end;margin-right: 20rpx;}
+.pubText1{border: 1rpx solid #1c5396;border-radius: 10rpx;padding: 5rpx 30rpx;font-size: 26rpx;margin-right: 50rpx;font-weight: 600;}
+.pubText2{border-radius: 10rpx;padding: 5rpx 30rpx;font-size: 26rpx;background-color:#1c5396 ;color: white;}
+ 
+
+/* 分割线 */
+.hr{height: 1rpx; background-color: #648fc5;margin: 20rpx 0rpx;}
+
+/* 文本内容 */
+.inputText{font-size: 28rpx;width: 100%;}
+.placeholderStyle{font-size: 28rpx;}
+
+/* 话题 */
+.topicWrap{margin: 10rpx 0;display: flex;flex-direction: row;justify-content: space-between;}
+.choosed{color: #648fc5;}
+.chooseWrap{position: fixed;bottom: 0;background-color: #f3f3f3;width: 100%;padding-top: 30rpx;border-top-left-radius: 50rpx;border-top-right-radius: 50rpx;height:800rpx;}
+.title{display: flex;flex-direction: row;justify-content: space-between;margin-bottom: 20rpx;padding: 0 50rpx;}
+.scroll{height: 700rpx;}
+.topics{display: flex;flex-direction: row; justify-content: space-between;padding: 15rpx 60rpx;align-items: center;border-bottom: solid 1rpx #f3f3f3;background-color: white;}
+.tabs{display: flex;flex-direction: column;}
+.topic{color: #648fc5;padding: 5rpx 0;}
+.desc{color: #8d8d8d;font-size: 26rpx;margin-bottom: 10rpx;}
+.choose{color: white;background-color: #1c5396;padding: 10rpx 25rpx;border-radius: 30rpx;font-size: 26rpx;flex-shrink: 0;margin-left: 20rpx;}
+
+/* 图片 */
+.imgWrap{display: flex;flex-direction: row;flex-wrap: wrap;}
+.oneImg{position: relative;}
+.deleteImg{position: absolute;right: 0;top: 0;height: 30rpx;width: 30rpx;margin: 0 4rpx;}
+.addPic{height: 222rpx;width: 222rpx;margin: 0 4rpx;}

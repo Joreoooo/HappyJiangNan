@@ -1,0 +1,16 @@
+<view class="all">
+  <view class="moneyNum">
+    <view>姓名</view>
+    <input class="pubInput" placeholder="请输入姓名" bindinput="getInputValue_name" value="{{inputValue}}"/>
+
+  </view>
+  <view class="wxID">
+    <view>学号</view>
+    <input class="pubInput" placeholder="请输入学号" bindinput="getInputValue_stuId" value="{{inputValue}}"/>
+    <view></view>
+  </view>
+
+
+  <view class="pubButton" bindtap="submit">提交</view>
+
+</view>

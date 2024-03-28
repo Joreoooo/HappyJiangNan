@@ -1,0 +1,30 @@
+.contain{margin: 0 30rpx;display: flex;flex-direction: column;justify-content: space-between;height: 1000rpx;}
+
+/* 发表按钮 */
+.pubWrap{display: flex;flex-direction: row;justify-content: flex-end;margin-right: 20rpx;}
+.pubText1{border: 1rpx solid #1c5396;border-radius: 10rpx;padding: 5rpx 30rpx;font-size: 26rpx;margin-right: 50rpx;font-weight: 600;}
+.pubText2{border-radius: 10rpx;padding: 5rpx 30rpx;font-size: 26rpx;background-color:#1c5396 ;color: white;}
+
+/* 分割线 */
+.hr{height: 1rpx; background-color:#1c5396;margin: 20rpx 0rpx;}
+
+/* 文本内容 */
+.inputText{font-size: 28rpx;width: 100%;}
+.placeholderStyle{font-size: 28rpx;}
+
+
+/* 地点 */
+.place{display:flex;flex-direction: row;width: 100%;}
+.placeInput{width: 100%;}
+
+/* 价格 */
+.costWrap{display: flex;flex-direction: row;justify-content: space-between;width: 100%;margin-bottom: 20rpx;}
+.mili{display: flex;flex-direction: row;font-size: 28rpx;align-items: center;}
+.placeholderStyle2{color: #e60012;margin-left: 10rpx;font-size: 32rpx}
+.miliNum{color: #e60012;margin-left: 10rpx;width: 100rpx;}
+
+/* 图片 */
+.imgWrap{display: flex;flex-direction: row;flex-wrap: wrap;}
+.oneImg{position: relative;}
+.deleteImg{position: absolute;right: 0;top: 0;height: 30rpx;width: 30rpx;margin: 0 4rpx;}
+.addPic{height: 222rpx;width: 222rpx;margin: 0 4rpx;}

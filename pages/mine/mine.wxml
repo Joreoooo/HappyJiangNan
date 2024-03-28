@@ -1,0 +1,47 @@
+<button bindtap="getUserProfile" wx:if="{{userInfo.openid==undefined}}">登录</button>
+<view wx:else class="whole">
+  <view class="userInfo" bindtap="toOther">
+    <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+    <view class="nickname">{{userInfo.nickName}}</view>
+  </view>
+
+  <view class="datas">
+    <view class="data" bindtap="toMyActive">我的帖子（{{activeNum}}）</view>
+    <view class="data" bindtap="toMyOrder">我的订单（{{orderNum}}）</view>
+  </view>
+
+  <view class="operation">
+    <view class="oper" bindtap="toChongMoney">
+      <image class="pic" src="/images/mine/chongzhi.png" mode="aspectFit"></image>
+      <view>米粒充值</view>
+    </view>
+    <view class="oper" bindtap="toGetMoney">
+      <image class="pic" src="/images/mine/get.png" mode="aspectFit"></image>
+      <view>提现</view>
+    </view>
+    <view class="oper">
+      <image class="pic" src="/images/mine/address.png" mode="aspectFit"></image>
+      <view>地址管理</view>
+    </view>
+    <view class="oper" bindtap="toQuestion">
+      <image class="pic" src="/images/mine/question.png" mode="aspectFit"></image>
+      <view>问题反馈</view>
+    </view>
+    <view class="oper">
+      <image class="pic" src="/images/mine/share.png" mode="aspectFit"></image>
+      <view>分享海报</view>
+    </view>
+  </view>
+
+  
+
+  <view class="logo">
+    <image src="/images/mine/logo.png" class="logoPic" mode="aspectFit"></image>
+  </view>
+
+  <button bindtap="toRealName" wx:if="{{realName==''}}" class="realNameButton">实名认证</button>
+  <view wx:else class="realInfo">
+    <view>姓名：<text>{{realName}}</text></view>
+    <view>学号：<text>{{stuId}}</text></view>
+  </view>
+</view>

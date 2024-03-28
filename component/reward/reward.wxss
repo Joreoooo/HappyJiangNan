@@ -1,0 +1,21 @@
+.order{background-color: white;margin-bottom: 10rpx ;border-radius: 20rpx;padding-bottom: 5rpx;}
+.up{display: flex;flex-direction: row;}
+.avatar{height: 90rpx;width: 90rpx;margin: 20rpx;border-radius: 50%;border: solid 2rpx #d4d4d4;}
+.tag{font-size: 24rpx;border-radius: 15rpx;flex-shrink: 0;color: #3366cc;}
+.name-time-cost{display: flex;flex-direction: row;align-items: center;margin: 20rpx 0;}
+.left{display: flex;flex-direction: column;align-items: center;margin: 0 10rpx;}
+.right{display: flex;flex-direction: column;}
+.nickName{margin-top: 10rpx;}
+.time{font-size: 22rpx;color: #8c8a8a;margin-top: 10rpx;}
+.cost{font-size: 40rpx;color: #cc0000;position: absolute;right: 60rpx;}
+.content{font-size: 28rpx;margin: 0 20rpx 0 5rpx;}
+
+.down{background-color: #e2f5fe;border-radius: 20rpx;margin: 10rpx 20rpx;}
+.place{display: flex;flex-direction: row;align-items: center;}
+.square1{color: white;background-color: #f8b551;border-radius: 5rpx;margin:10rpx 50rpx 10rpx 20rpx;font-size: 26rpx;padding: 7rpx 10rpx;border-radius: 10rpx;font-weight: 600;}
+.square2{color: white;background-color: #1c5396;border-radius: 10rpx;margin:5rpx 50rpx 10rpx 20rpx;font-size: 26rpx;padding: 7rpx 10rpx;border-radius: 10rpx;font-weight: 600;}
+.placeFrom{font-size: 28rpx;}
+.placeTo{font-size: 28rpx;}
+
+.helpWrap{display: flex;flex-direction: row;justify-content: flex-end;}
+.helpPic{height:50rpx;margin-right: 30rpx;}

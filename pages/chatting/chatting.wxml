@@ -1,0 +1,32 @@
+<view class="nickName">
+  <view>{{chatterInfo.nickName}}</view>
+</view>
+
+<view style="height: 100rpx;"></view>
+
+<!-- 消息内容 -->
+<block wx:for="{{chatList}}" wx:key="index">
+  <block wx:if="{{userInfo.openid!=item.openid}}">
+    <view class="left">
+      <image class="avatarUrl" src="{{item.avatarUrl}}"></image>
+      <view class="text-left">{{item.text}}</view>
+    </view>
+  </block>
+  <block wx:if="{{userInfo.openid==item.openid}}">
+    <view class="right">
+      <view class="text-right">{{item.text}}</view> 
+      <image class="avatarUrl-right" src="{{item.avatarUrl}}"></image>
+    </view>
+  </block>  
+</block>
+
+<!-- 做一个高度，防止消息被发送框挡到 -->
+<view style="height: 200rpx;"></view>
+
+<!-- 发送框 --> 
+<view class="pubWrap">
+  <view class="pubLeft">
+    <input class="pubInput" placeholder="{{placeholder}}" bindinput="getInputValue" value="{{inputValue}}"/>
+  </view>
+  <view class="pubButton" bindtap="submit">发送</view>
+</view>

@@ -1,0 +1,51 @@
+
+<view class="whole">
+
+  <!-- 自定义tab -->
+  <view class="page">
+    <scroll-view class="tab" scroll-x="{{true}}" enable-flex="{{true}}">
+      <block wx:for="{{tabs}}" wx:key="index" >
+        <view class="{{tabIndex==index?'active':'barItem'}}" bindtap="onTabClick" data-index="{{index}}" data-tag="{{item}}">{{item}}</view>
+      </block>
+    </scroll-view>
+
+      <!-- 搜索框 -->
+      <view class="searchInput">
+        <image src="/images/home/search.png" class="searchIcon"></image>
+        <view class="searchText">搜索</view>
+      </view>
+
+    <!-- 内容区域 -->
+    <view class="content-wrapper">
+      <block wx:if="{{tabIndex==0}}">
+        <block wx:for="{{activeList}}" wx:key="index">
+          <active item="{{item}}"></active>
+        </block>
+
+      </block>
+
+      <block  wx:if="{{tabIndex==1}}">
+        <block wx:for="{{activeList}}" wx:key="index">
+          <active item="{{item}}" wx:if="{{item.zanList.length>2}}" ></active>
+        </block>
+      </block>
+
+      <block  wx:if="{{tabIndex>1}}">
+        <block wx:for="{{activeList}}" wx:key="index">
+          <active item="{{item}}" wx:if="{{item.tag==tabTag}}"></active>
+        </block>
+      </block>
+
+
+
+  </view>
+
+  </view>
+
+  <!-- 发布需求按钮 -->
+  <view class="publish"  bindtap="toPublish"><image src="/images/home/publish.png" class="publishIcon"></image></view>
+
+</view>
+
+
+ 

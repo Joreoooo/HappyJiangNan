@@ -1,0 +1,9 @@
+<view class="text">您遇到的问题是：</view>
+<view class="all">
+
+  <!-- 文本内容 -->
+  <view class="inputWrap">
+    <textarea class="inputText" placeholder="有什么不爽欢迎吐槽，我们会尽快改进哒~" rows="2000"placeholder-class="placeholderStyle" bindinput="getInput"></textarea>
+  </view>
+  <view class="pubButton" bindtap="submit">提交</view>
+</view>  

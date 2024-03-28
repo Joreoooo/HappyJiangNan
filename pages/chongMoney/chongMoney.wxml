@@ -1,0 +1,16 @@
+<view class="all">
+  <view class="moneyNum">
+    <view>充值</view>
+    <input class="pubInput" placeholder="请输入提现金额" bindinput="getInputValue" value="{{inputValue}}"/>
+    <view>元</view>
+  </view>
+  <view class="wxID">
+    <view>微信号</view>
+    <input class="pubInput" placeholder="请输入微信号" bindinput="getInputValue" value="{{inputValue}}"/>
+    <view></view>
+  </view>
+
+
+  <view class="pubButton" bindtap="submit">充值</view>
+
+</view>

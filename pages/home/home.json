@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "reward":"/component/reward/reward",
+    "lost":"/component/lost/lost",
+    "second":"/component/second/second"
+  }
+}

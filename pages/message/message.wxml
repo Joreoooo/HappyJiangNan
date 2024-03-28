@@ -1,0 +1,58 @@
+<!-- 搜索框 -->
+<view class="searchInput">
+  <image src="/images/home/search.png" class="searchIcon"></image>
+  <view class="searchText">搜索</view>
+</view>
+
+<!-- 互动消息 -->
+<view class="interWrap">
+  <view class="left">
+    <image src="/images/message/inter.png" class="avatar"></image>
+  </view>
+  <view class="right">
+    <view class="up">
+      <view>互动消息</view>
+      <view class="time">2022-10-08 14:00</view>
+    </view>
+    <view class="down">
+      <view class="interMsg">还没有新的互动消息呢</view>
+    </view>
+  </view>
+</view>
+
+<!-- 聊天消息 -->
+<view class="chatWrap">
+  <view wx:for="{{myMsgList}}" wx:key="index" class="interWrap">
+    <view wx:if="{{item._openid==userInfo.openid}}" class="oneMsg" bindtap="toChatting" data-openid="{{item.userB_openid}}">
+      <view class="left">
+        <image src="{{item.userB_avatar}}" class="avatar"></image>
+      </view>
+      <view class="right">
+        <view class="up">
+          <view>{{item.userB_nickName}}</view>
+          <view class="time" wx:if="{{item.record[item.record.length-1]}}">{{item.record[item.record.length-1].time}}</view>
+          <view wx:else class="time">{{item.time}}</view>
+        </view>
+        <view class="down">
+          <view class="interMsg">{{item.record[item.record.length-1].text}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{item.userB_openid==userInfo.openid}}" class="oneMsg" bindtap="toChatting" data-openid="{{item._openid}}">
+      <view class="left">
+        <image src="{{item.userA_avatar}}" class="avatar"></image>
+      </view>
+      <view class="right">
+        <view class="up">
+          <view>{{item.userA_nickName}}</view>
+          <view class="time" wx:if="{{item.record[item.record.length-1]}}">{{item.record[item.record.length-1].time}}</view>
+          <view wx:else class="time">{{item.time}}</view>
+        </view>
+        <view class="down">
+          <view class="interMsg">{{item.record[item.record.length-1].text}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

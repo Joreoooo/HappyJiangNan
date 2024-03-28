@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "active":"/component/active/active"
+  },
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,24 @@
+<view class="all">
+  <view class="moneyNum">
+    <view>提现</view>
+    <input class="pubInput" placeholder="请输入提现金额" bindinput="getInputValue" value="{{inputValue}}"/>
+    <view>元</view>
+  </view>
+  <view class="wxID">
+    <view>微信号</view>
+    <input class="pubInput" placeholder="请输入微信号" bindinput="getInputValue" value="{{inputValue}}"/>
+    <view></view>
+  </view>
+  <view class="tips">
+    <text>
+      注意:
+1、提现请添加客服微信 xxxxxxxxxxx 进行操作
+2、提现需要扣除5%的手续费
+3、提现每次不超过200积分
+4、提现间隔须大于24小时
+    </text>
+  </view>
+
+  <view class="pubButton" bindtap="submit">提现</view>
+
+</view>
